@@ -112,8 +112,6 @@ pub async fn chrome() -> Result<WebDriver, Box<dyn std::error::Error>> {
     caps.add_chrome_arg("window-size=1920,1080").unwrap();
     caps.add_chrome_arg("user-agent=Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/102.0.0.0 Safari/537.36").unwrap();
     caps.add_chrome_arg("disable-infobars").unwrap();
-    caps.add_chrome_arg("user-data-dir=~/.config/google-chrome/Default")
-        .unwrap();
     caps.add_chrome_option("excludeSwitches", ["enable-automation"])
         .unwrap();
     let mut driver = None;
